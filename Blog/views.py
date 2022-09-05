@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Post
 
 
 # Create your views here.
@@ -7,11 +8,13 @@ posts = [
 
     {'author': 'Amir',
         'title': 'first post',
-        'created_date': '4 september', },
+        'created_date': '4 september',
+        'content': 'This is my first post.'},
 
     {'author': 'Reza',
         'title': 'seconed post',
-        'created_date': '5 september', }
+        'created_date': '5 september',
+        'content': 'I posted a content.'}
 
 
 
@@ -20,7 +23,7 @@ posts = [
 
 def index(request):
     # we use context to add data to our template
-    context = {'posts': posts}
+    context = {'posts': Post.objects.all()}
 
     return render(request, 'blog/index.html', context=context)
 
