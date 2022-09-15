@@ -8134,7 +8134,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  /* font-size: 15px; */
+  font-size: 15px;
   line-height: 1.8;
   font-weight: normal; }
 

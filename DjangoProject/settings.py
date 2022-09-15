@@ -140,3 +140,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+# this code send users to home page after they logged in
+LOGIN_REDIRECT_URL = 'blog-home'
+# when logged out user wants to see profile, first django redirect user to this url then send user to profile.
+LOGIN_URL = 'login'
