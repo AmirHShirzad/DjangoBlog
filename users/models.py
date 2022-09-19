@@ -1,6 +1,6 @@
-from email.policy import default
 from django.db import models
 from django.contrib.auth.models import User
+from PIL import Image
 
 # Create your models here.
 
@@ -16,5 +16,19 @@ class Profile(models.Model):
 
 # __str__ method help us to print the class with more details. in default it shows class.objects
 
+
     def __str__(self):
         return f'{self.user.username} Profile'
+
+
+# create a save method than resize the large photo than user uploaded befor saving
+
+    def save(self):
+        # with super class we can call a parent method like save to overwrite that
+        super().save()
+        img = Image.open(self.image.path)
+
+        if img.height > 300 or img.width > 300:
+            output_size = (300, 300)
+            img.thumbnail(output_size)
+            img.save(self.image.path)
