@@ -10,8 +10,12 @@
             <legend class="border-bottom mb-4">Login to Django Blog</legend>
             {{form | crispy}}
         </fieldset>
+        
         <div class="form-group">
             <button class="btn btn-outline-info" type="submit">Sign in</button>
+            <small class="text-muted mb-4">
+                <a class="ml-2" href="{% url 'password_reset' %}">Forgot password?</a>
+            </small>
         </div>
 
     </form>

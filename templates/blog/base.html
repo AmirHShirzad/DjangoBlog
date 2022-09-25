@@ -34,7 +34,7 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'blog-home' %}">
                     <img class="img-thumbnail img-circle" src="{% static 'img/blogger.png' %}" width="30"
                         height="30" alt="logo">
                     Django Blog
@@ -61,7 +61,7 @@
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                 <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
-                                                <a class="dropdown-item" href="{% url 'profile' %}">Edit Profile</a>
+                                                <a class="dropdown-item" href="{% url 'password_reset' %}">Reset Password</a>
                                                 <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
                                             </div>
                                         </li>
@@ -126,7 +126,7 @@
                             <p class="copyright">
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved for DjangoBlog
                             </p>
                         </div>
                     </div>
