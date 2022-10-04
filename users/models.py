@@ -23,7 +23,7 @@ class Profile(models.Model):
 
 # create a save method than resize the large photo than user uploaded befor saving
 
-    def save(self):
+    def save(self, *args, **kwargs):
         # with super class we can call a parent method like save to overwrite that
         super().save()
         img = Image.open(self.image.path)

@@ -8229,3 +8229,9 @@ footer {
   .footer-07 .ftco-footer-social li a {
     background: transparent;
     border: 1px solid #a3de83; }
+
+.plus-icon {
+  color: #545b62;
+  margin-top: 14px;
+  margin-right: 10px;
+}
